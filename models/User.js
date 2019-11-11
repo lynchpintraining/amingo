@@ -13,6 +13,10 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    email:{
+        type: String,
+        required: true
+    },
     password:{
         type: String,
         required: true
@@ -31,7 +35,7 @@ const UserSchema = new Schema({
 //follow the convention of using CAPTTAL FIRST letter of schema
 
 //module.export is being used because once we create this mode then we have use in server.js
-module.exports = User = mongoose.model('user', UserSchema); //we are using mongoos.model function to convert scheme to a mode
+module.exports = User = mongoose.model('user', UserSchema); //we are using mongoos.model function to convert scheme to a mode. user is name of the collection. UseraScheme is what we created to get the information. 
 
 //various mongoose functions https://mongoosejs.com/docs/queries.html
 

@@ -10,7 +10,8 @@ const FeedsSchema = new Schema({
         required: true,
     },
     comment: {
-        type: String
+        type: String,
+        required: true
     },
     tags: {
         type: Array,
@@ -21,12 +22,12 @@ const FeedsSchema = new Schema({
         default: 0
     },
     likes: {
-    type: Number,
-    default: 0
+    type: Array,
+    default: [] //this array will contains the id of the user who like this. so that we can then add the length of this array and display that how many are the likes for this post
     },
     shares: {
-        type: Number,
-        default: 0
+        type: Array,
+        default: [] //this array will contains the id of the user who share this. so that we can then add the length of this array and display that how many are the shares for this post
     },
     date: {
         type: Date,
