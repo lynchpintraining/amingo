@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 //we are using requrie module, which will import an (express) package into your file. "require" fucntion comes from nodejs. any package that you creat you always put it at top
 const express = require('express');
