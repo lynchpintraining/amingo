@@ -1,7 +1,7 @@
 const PassportJWT = require('passport-jwt');//we are specifuing the type of passport. we are sayiung here that it is jwt and all the login id will be in  string and it will be a token. 
 const JwtStrategy = PassportJWT.Strategy;//we are encrypting here and will generate the JWT
 const ExtractJwt = PassportJWT.ExtractJwt;//allows to retirvie the username an password from string. extract the payload
-const secret = 'thisIsTheSecret';//it will take info and it will then encrypt it. It will make a secret token for us. 
+const secret = process.env.SECRET;//it will take info and it will then encrypt it. It will make a secret token for us. 
 
 const UserModel = require('../models/User');//normally we do hide it finally and put it in other file. 
 

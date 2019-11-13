@@ -1,4 +1,4 @@
-//import mongoos
+//import mongoos. 
 const mongoose = require('mongoose');
 
 //Assign the Scheme object ==> scheme is the structure of the data that is goig to database. e.g. all fields of user form

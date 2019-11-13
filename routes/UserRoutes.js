@@ -1,9 +1,9 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');//becrypt will encrypt the password and add salt to it
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const UserModel = require('../models/User');
-const secret = 'thisIsTheSecret';
+const secret = process.env.SECRET;
 
 router.post('/register', (req, res)=>{
 
@@ -66,8 +66,7 @@ router.post('/login', (req, res)=>{
     UserModel
     .findOne({ email: email }) //{}
     .then((theUser)=>{
-        if(theUser) {
-            
+        if(theUser) {            
             bcrypt
             .compare(password, theUser.password)
             .then((isMatch)=>{
